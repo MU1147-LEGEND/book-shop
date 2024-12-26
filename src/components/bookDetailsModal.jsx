@@ -51,7 +51,7 @@ const BookDetailsModal = ({ setBookDetailsModal, id, BooksData }) => {
                                 <span>{book?.publication}</span>
                             </div>
                             <p className="text-lg">দাম: {book?.price} ৳</p>
-                            <p className="text-lg leading-relaxed lg:max-h-36 overflow-y-auto overflow-y-scroll p-4 border rounded">
+                            <p className="text-lg leading-relaxed lg:max-h-36 overflow-y-auto p-4 border rounded">
                                 <span className="text-2xl font-semibold">Book Summary:</span><br />
                                 {book?.summery}
                             </p>
