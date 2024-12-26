@@ -8,7 +8,7 @@ import { FiSun } from "react-icons/fi";
 import { useEffect, useState } from "react";
 
 
-const Header = ({isModalOpen, setIsModalOpen}) => {
+const Header = ({ isModalOpen, setIsModalOpen }) => {
     const [isDark, setIsDark] = useState(false);
 
     const handleThemeChange = () => {
@@ -39,7 +39,7 @@ const Header = ({isModalOpen, setIsModalOpen}) => {
     }
 
     return (
-        <section className="dark:bg-gray-300/95 bg-white/95 sticky top-0 w-full">
+        <section className="dark:bg-gray-300/95 bg-white/95 sticky top-0 w-full z-10">
             <div className="container m-auto flex justify-around items-center h-24">
                 {/* logo and search header-left */}
                 <div className="flex items-center justify-around md:w-[40%]">
@@ -48,9 +48,9 @@ const Header = ({isModalOpen, setIsModalOpen}) => {
                     </div>
                     <div className="search flex relative items-center lg:w-4/5 md:w-2/3 ">
                         <label htmlFor="search"></label>
-                        <FiSearch 
-                        onClick={() => {showSearchBar()}}
-                        className="absolute left-1 text-xl animate-pulse cursor md:pointer-events-none" />
+                        <FiSearch
+                            onClick={() => { showSearchBar() }}
+                            className="absolute left-1 text-xl animate-pulse cursor md:pointer-events-none" />
                         <input
                             type="text"
                             name="search"
@@ -102,7 +102,7 @@ const Header = ({isModalOpen, setIsModalOpen}) => {
                     </div>
                 </div>
             </div>
-            <hr className="dark:border-gray-600"/>
+            <hr className="dark:border-gray-600" />
         </section>
     )
 }
