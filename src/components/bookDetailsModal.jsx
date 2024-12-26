@@ -13,7 +13,7 @@ const BookDetailsModal = ({ setBookDetailsModal, id, BooksData }) => {
         <>
             <section
                 onClick={() => setBookDetailsModal(false)}
-                className="absolute top-0 left-0 bottom-0 right-0 bg-green-300/10 h-screen w-full overflow-hidden m-auto flex">
+                className="absolute top-0 left-0 bottom-0 right-0 bg-green-300 dark:bg-gray-400 h-screen w-full  m-auto flex">
                 <div
                     onClick={(e) => e.stopPropagation()}
                     className="book-details-modal m-auto relative h-2/3 w-3/4 bg-white/80 rounded-2xl shadow-xl p-4">

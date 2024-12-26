@@ -3,16 +3,24 @@ import { FaEdit } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa6";
 import { TbTrashXFilled } from "react-icons/tb";
 import { FaStar } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 
 const Book = ({ book, setBookDetailsModal, setId }) => {
-    
+
     const handleOpenBookDetails = (id) => {
         setId(id);
         setBookDetailsModal(true);
     }
 
-    console.log(book.id);
+    const toastMessage = (book) => {
+        toast.success(`${book} added to your favourite list.`, {
+            position: "top-right",
+            autoClose: 2500,
+            closeOnClick: true,
+            pauseOnHover: false,
+        });
+    }
 
     return (
 
@@ -49,7 +57,10 @@ const Book = ({ book, setBookDetailsModal, setId }) => {
                                 <FaEdit className="text-orange-400 cursor-pointer" />
                                 <span className="tooltip">Edit</span>
                             </span>
-                            <span className="tooltip-container">
+                            <span
+                                className="tooltip-container"
+                                onClick={() => toastMessage(book?.bookName)}
+                                >
                                 <FaRegHeart className="text-orange-400 cursor-pointer" />
                                 <span className="tooltip">Favourite</span>
                             </span>

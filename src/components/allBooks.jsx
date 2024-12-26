@@ -9,7 +9,7 @@ const AllBooks = ({ isModalOpen, setIsModalOpen }) => {
   const [BooksData, setBooksData] = useState(
     [
       {
-        id: crypto.randomUUID(),
+        id: crypto.randomUUID,
         bookName: "মহিমান্বিত কুরআন",
         author: "অনুবাদক: মুফতি আবু উমামা কুতুবুদ্দিন মাহমুদ",
         rating: "5.0",
