@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 3px;
+}
+/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+.filters::-webkit-scrollbar {
+    display: none;
+}
+/* Hide scrollbar for Firefox */
+.filters {
+    scrollbar-width: none; /* Firefox */
+}
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+/* tooltip custom design */
+.tooltip {
+    position: absolute;
+    bottom: 120%; 
+    left: 50%;
+    transform: translateX(-50%) translateY(10px); 
+    background-color: rgba(0, 0, 0, 0.75); 
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    pointer-events: none;
+}
+
+.tooltip-container:hover .tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0); /* Move to final position */
+}
+/* tooltip arrow */
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%; 
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.75) transparent transparent transparent;
+}
