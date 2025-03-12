@@ -62,14 +62,17 @@ const Header = ({ isModalOpen, setIsModalOpen }) => {
                 </div>
 
 
-                {/* menues header-right */}
+                {/* menus header-right */}
                 <div className="right-menu md:w-[40%] justify-around flex gap-1">
 
                     <div className="category cursor-pointer">
                         <BiSolidCategory className="text-2xl text-purple-950" />
                     </div>
                     <div className="heart cursor-pointer">
-                        <FaHeart className="text-xl text-[#FFAE00]" />
+                        <FaHeart 
+                        className="text-xl text-[#FFAE00]"
+                        onClick={() => { alert('Favourite Books') }}
+                        />
                     </div>
                     <div className="folder cursor-pointer">
                         <FaFolderClosed className="text-xl text-red-600 hidden md:flex" />
